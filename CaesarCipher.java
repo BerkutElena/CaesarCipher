@@ -8,7 +8,9 @@ import java.util.*;
 class CeasarCipher {
 
     /*
+    *
     Читает и шифрует тест из файла.
+    *
      */
 
 
@@ -45,7 +47,9 @@ class CeasarCipher {
     }
 
 /*
+*
     Читает и расшифровывает тест из файла.
+    *
      */
 
 
@@ -82,7 +86,9 @@ class CeasarCipher {
 
 
     /*
+    *
     Записывает шифрованный и расшифрованный тест из файла в новый файл.
+    *
      */
 
     private static void writingFile(String FileNameCopy, String output) {
@@ -100,7 +106,9 @@ class CeasarCipher {
 
 
     /*
+    *
      Расшифровывает методом подбора ключей.
+     *
      */
     public static void bruteForce(String FileName) {
 
@@ -140,3 +148,7 @@ class CeasarCipher {
 
 
 }
+
+/*
+
+ */

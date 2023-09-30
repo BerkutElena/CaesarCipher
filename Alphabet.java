@@ -4,8 +4,10 @@ import java.util.List;
 public class Alphabet {
 
     /*
+    *
     Содержит глобальные переменные алфавита.
-     */ 123
+    *
+     */
 
 
     public static final List<Character> ALPHABET = Arrays.asList('а', 'б', 'в', 'г', 'д', 'е',
@@ -23,3 +25,6 @@ public class Alphabet {
 
 
 }
+/*
+
+ */

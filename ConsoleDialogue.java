@@ -11,7 +11,10 @@ public class ConsoleDialogue {
 
 
     /*
+    *
+    * *
     Стартовое меню для пользователя
+    *
      */
 
     public static void start() {
@@ -34,6 +37,7 @@ public class ConsoleDialogue {
 
 
     /*
+    *
     Позволяет пользователю сделать выбор. Пользователь не сможет ввести цифры >3  или буквы.
      */
 
@@ -117,3 +121,7 @@ public class ConsoleDialogue {
     }
 
 }
+
+/*
+
+ */

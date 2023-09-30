@@ -1,7 +1,9 @@
 public class Validator {
 
 /*
+*
 Проверяет не использует ли пользователь системные файлы для шифровки и расшифровки.
+*
  */
 
     public static void ridingFilesValidator(String FileName) {
@@ -42,7 +44,9 @@ public class Validator {
     }
 
     /*
+    *
     Проверка ключа. Могут быть только положительные цифры.
+    *
      */
 
     public static void keyValidator(int key) {
