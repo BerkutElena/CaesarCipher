@@ -1,3 +1,3 @@
 class u7u {
-    String d;
+    String o;
 }
