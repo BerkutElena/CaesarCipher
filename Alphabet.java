@@ -5,7 +5,8 @@ public class Alphabet {
 
     /*
     Содержит глобальные переменные алфавита.
-     */
+     */ 123
+
 
     public static final List<Character> ALPHABET = Arrays.asList('а', 'б', 'в', 'г', 'д', 'е',
             'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х',
