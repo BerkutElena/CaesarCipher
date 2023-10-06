@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -30,7 +32,8 @@ public class ConsoleDialogue {
         System.out.println("Выберите функцию");
         System.out.println("(1.)Зашифровать файл.\n"
                 + "(2.)Расшифровать файл.\n" +
-                "(3.)Взлом (Brute Force)\n");
+                "(3.)Взлом (Brute Force)\n"+
+        "(4.)Выход из программы");
         userSelection();
 
     }
@@ -51,10 +54,13 @@ public class ConsoleDialogue {
             int choice = console.nextInt();
 
 
-            if (choice == 1) {
+
+
+            if (choice==1) {
                 System.out.println("Введите адрес файла для зашифровки:");
                 FileName = console.next();
                 validator.ridingFilesValidator(FileName);
+
                 //ridingFilesValidator();
 
                 System.out.println("Введите ключ:");
@@ -84,7 +90,7 @@ public class ConsoleDialogue {
                 validator.keyValidator(key);
                 //keyValidator();
 
-                System.out.println("Введите адрес файла для сохранения зашифрованного теста:");
+                System.out.println("Введите адрес файла для сохранения расшифрованного теста:");
                 FileNameCopy = console.next();
                 validator.whithingFilesValidator(FileNameCopy);
                 //ridingFilesCopyValidator();
@@ -96,7 +102,7 @@ public class ConsoleDialogue {
                 //start();
 
 
-            } else if (choice == 3) {
+            } else if (choice ==3) {
                 System.out.println("Введите адрес файла для расшифровки методом Brute Force:");
                 FileName = console.next();
                 validator.ridingFilesValidator(FileName);
@@ -105,12 +111,13 @@ public class ConsoleDialogue {
                 FileNameCopy = console.next();
                 validator.whithingFilesValidator(FileNameCopy);
                 //ridingFilesCopyValidator();
-
-
                 ceasarCipher.bruteForce(FileName);
 
-            } else if ((choice != 1) && (choice != 2) && (choice != 3)) {
-                System.out.println("Выберите цифры : (1.)\n" + "(2.)\n" + "(3.)\n");
+            } else if (choice == 4) {
+                Main.end();
+            }
+            else if ((choice !=1) && (choice != 2) && (choice != 3) && (choice !=4)) {
+                System.out.println("Выберите цифры:\n(1.)\n" + "(2.)\n" + "(3.)\n" + "(4.)\n");
                 userSelection();
             }
 

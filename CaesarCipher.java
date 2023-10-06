@@ -39,7 +39,7 @@ class CeasarCipher {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Файл не найден.");
+            System.out.println("Файл  для шифрования не найден.");
         }
 
 
@@ -56,10 +56,10 @@ class CeasarCipher {
     public static void readingFileDecryption(String FileName, int key) {
 
 
-         String output = "";
-         char c = 0;
+        String output = "";
+        char c = 0;
 
-         try {
+        try {
             ArrayList<String> lines = new ArrayList<>(Files.readAllLines(Paths.get(FileName)));
             for (String str : lines) {
                 char[] chars = str.toCharArray();
@@ -92,6 +92,8 @@ class CeasarCipher {
      */
 
     private static void writingFile(String FileNameCopy, String output) {
+
+
         try {
             FileWriter writer = new FileWriter(FileNameCopy);
             writer.write(output);
@@ -112,11 +114,10 @@ class CeasarCipher {
      */
     public static void bruteForce(String FileName) {
 
-        String output =  "";
+        String output = "";
         char c = 0;
         int letter = 33;
-        for (int k = 1; k < letter; k++) {
-
+        for (int k = 1; k < letter; k++){
             try {
                 ArrayList<String> lines = new ArrayList<>(Files.readAllLines(Paths.get(FileName)));
                 for (String str : lines) {
@@ -127,20 +128,24 @@ class CeasarCipher {
                             for (int j = 0; j < Alphabet.BRUT_ALPHABET.size(); ++j) {
                                 char a = Alphabet.BRUT_ALPHABET.get(j);
                                 if (c == a) {
-
                                     int x = Math.abs(j - k) % Alphabet.BRUT_ALPHABET.size();
-                                    char ch = Alphabet.ALPHABET.get(x);
+                                    char ch = Alphabet.BRUT_ALPHABET.get(x);
                                     output += ch;
                                 }
                             }
                         }
                     }
                 }
-            } catch (IOException e ) {
+
+            }catch (IOException e) {
                 System.out.println("Файл для расшифровки не найден.");
             }
 
-        }
+    }
+
+
+
+
 
 
         writingFile(ConsoleDialogue.FileNameCopy, output);
